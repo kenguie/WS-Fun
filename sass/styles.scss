@@ -1,0 +1,242 @@
+body {
+  display: grid;
+  margin: 15px 15px 50px 15px;
+
+  #header {
+    justify-self: center;
+    margin: 25px 15px 15px 15px;
+  }
+
+  #navigation {
+    .menu {
+      margin-top: 10px;
+      display: inline;
+      font-size: 25px;
+      padding-left: 10px;
+    }
+
+    nav {
+      -webkit-transition: height .5s ease;
+      -o-transition: height .5s ease;
+      transition: height .5s ease;
+      overflow: hidden;
+      display: none;
+
+      ul {
+        padding: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+
+        li {
+          list-style: none;
+          font-size: 20px;
+          padding: 10px;
+          border: 1px solid black;
+        }
+
+        .home {
+          background-color: #252f4f;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  #breadcrumbs {
+    margin-top: 10px;
+
+    .crumbs {
+      opacity: .5;
+    }
+    
+    .item {
+      display: inline;
+      opacity: 1;
+    }
+  }
+
+  #hero {
+    margin-top: 10px;
+    display: grid;
+
+    img {
+      justify-self: center;
+      max-width: 340px;
+    }
+  }
+
+  #preview {
+    margin-top: 10px;
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  #description {
+    .quantity {
+      border: 1px solid black;
+      display: inline-block;
+      padding: 5px 20px;
+
+      .fas {
+        padding-left: 15px;
+        margin-right: -15px;
+      }
+    }
+  }
+
+  #expanded {
+    margin-top: 10px;
+    border-top: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+
+    .more {
+      padding: 10px;
+
+      &.active {
+        display: none;
+      }
+    }
+
+    .expanded1, .expanded2, .expanded3 {
+      -webkit-transition: height .5s ease;
+      -o-transition: height .5s ease;
+      transition: height .5s ease;
+      overflow: hidden;
+      display: none;
+
+      &.active {
+        display: block;
+        padding: 10px;
+  
+        & p {
+          padding-left: 18px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  #footer { 
+    text-align: center;
+    padding: 15px;
+
+    .line2 {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  body {
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "header    header    header   	   header"
+      "nav       nav       nav      	   nav"
+      "crumbs    crumbs    crumbs        crumbs"
+      "hero      hero      description   description"
+      "hero      hero      description   description"
+      "hero      hero      expanded 	   expanded"
+      "preview   preview   .  	         ."
+      "footer    footer    footer   	   footer"
+  }
+
+  #header {
+    grid-area: header;
+  }
+
+  #navigation {
+    grid-area: nav;
+
+    i, div.menu {
+      display: none;
+    }
+
+    nav.inactive {
+      display: block;
+
+      ul {
+        display: grid;
+        grid: 45px / auto-flow;
+        background-color: #000;
+
+        li:not(:last-child) {
+          color: #fff;
+          justify-self: center;
+        }
+
+        li:last-child {
+          text-align: center;
+          border-left: 1px solid white;
+        }
+      }
+    }
+  }
+
+  #breadcrumbs {
+    grid-area: crumbs;
+
+    .crumbs {
+      display: inline;
+      padding-left: 15px;
+    }
+  }
+
+  #hero {
+    grid-area: hero;
+
+    img {
+      max-width: none !important;
+      width: auto;
+      margin: 30px;
+    }
+  }
+
+  #preview {
+    grid-area: preview;
+    justify-self: center;
+    grid-gap: 25px;
+    margin-bottom: 25px;
+
+    img {
+      width: auto;
+    }
+
+    img:nth-child(2) {
+      width: auto;
+    }
+  }
+
+  #description {
+    grid-area: description;
+  }
+
+  #expanded {
+    grid-area: expanded;
+
+    #more1, #more2, .expanded1, .expanded2 {
+      border-bottom: 1px solid #EFEFEF;
+    }
+
+    .expanded1, .expanded2, .expanded3 {
+      margin-top: 5px;
+    }
+  }
+
+  #footer {
+    grid-area: footer;
+    border-top: 1px solid black;
+    background-color: #EFEFEF;
+
+    .line2 {
+      display: inline !important;
+    }
+
+    .date {
+      color: red;
+    }
+  }
+}
