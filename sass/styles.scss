@@ -124,6 +124,10 @@ body {
     .line2 {
       display: block;
     }
+
+    .date {
+      color: red;
+    }
   }
 }
 
@@ -233,10 +237,6 @@ body {
 
     .line2 {
       display: inline !important;
-    }
-
-    .date {
-      color: red;
     }
   }
 }

@@ -77,6 +77,8 @@ body {
     padding: 15px; }
     body #footer .line2 {
       display: block; }
+    body #footer .date {
+      color: red; }
 
 @media (min-width: 750px) {
   body {
@@ -144,8 +146,6 @@ body {
     border-top: 1px solid black;
     background-color: #EFEFEF; }
     #footer .line2 {
-      display: inline !important; }
-    #footer .date {
-      color: red; } }
+      display: inline !important; } }
 
 /*# sourceMappingURL=styles.css.map */
