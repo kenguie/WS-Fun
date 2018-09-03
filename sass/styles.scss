@@ -81,6 +81,40 @@ body {
         margin-right: -15px;
       }
     }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4); 
+
+      .content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 32px;
+          width: 80%;
+      }
+
+      .closeButton {
+        color: rgb(96, 82, 228);
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .closeButton:hover,
+      .closeButton:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      }  
+    }
   }
 
   #expanded {
@@ -216,6 +250,16 @@ body {
 
   #description {
     grid-area: description;
+
+    .modal {
+      .content {
+        p {
+          font-size: 24px;
+          font-weight: bold;
+          font-family: sans-serif;
+        }
+      }
+    }
   }
 
   #expanded {
