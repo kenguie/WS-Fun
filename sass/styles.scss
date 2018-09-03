@@ -250,6 +250,7 @@ body {
 
   #description {
     grid-area: description;
+    padding-right: 30px;
 
     .modal {
       .content {
@@ -264,6 +265,7 @@ body {
 
   #expanded {
     grid-area: expanded;
+    padding-right: 30px;
 
     #more1, #more2, .expanded1, .expanded2 {
       border-bottom: 1px solid #EFEFEF;

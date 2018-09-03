@@ -158,14 +158,16 @@ body {
       width: auto; }
 
   #description {
-    grid-area: description; }
+    grid-area: description;
+    padding-right: 30px; }
     #description .modal .content p {
       font-size: 24px;
       font-weight: bold;
       font-family: sans-serif; }
 
   #expanded {
-    grid-area: expanded; }
+    grid-area: expanded;
+    padding-right: 30px; }
     #expanded #more1, #expanded #more2, #expanded .expanded1, #expanded .expanded2 {
       border-bottom: 1px solid #EFEFEF; }
     #expanded .expanded1, #expanded .expanded2, #expanded .expanded3 {
