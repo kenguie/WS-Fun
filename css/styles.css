@@ -106,7 +106,7 @@ body {
     body #footer .date {
       color: red; }
 
-@media (min-width: 750px) {
+@media (min-width: 450px) {
   body {
     margin: 0 auto;
     height: 100vh;
