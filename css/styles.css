@@ -23,9 +23,14 @@ body {
         font-size: 20px;
         padding: 10px;
         border: 1px solid black; }
+        body #navigation nav ul li a {
+          text-decoration: none;
+          color: #000; }
       body #navigation nav ul .home {
         background-color: #252f4f;
         color: #fff; }
+        body #navigation nav ul .home a {
+          color: #fff; }
   body #breadcrumbs {
     margin-top: 10px; }
     body #breadcrumbs .crumbs {
@@ -43,13 +48,31 @@ body {
     margin-top: 10px;
     display: grid;
     grid-auto-flow: column; }
-  body #description .quantity {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 5px 20px; }
-    body #description .quantity .fas {
-      padding-left: 15px;
-      margin-right: -15px; }
+  body #description .quantityContainer {
+    position: relative; }
+    body #description .quantityContainer .quantity {
+      border: 1px solid black;
+      display: inline-block;
+      padding: 10px 25px;
+      box-shadow: 2px 2px 5px grey;
+      font-size: 24px; }
+      body #description .quantityContainer .quantity .fas {
+        padding-left: 12px;
+        margin-right: -17px;
+        margin-top: -6px;
+        margin-bottom: -13px;
+        height: 45px; }
+    body #description .quantityContainer div.up, body #description .quantityContainer div.down {
+      height: 30px;
+      width: 50px;
+      position: absolute;
+      opacity: .5; }
+    body #description .quantityContainer div.up {
+      top: 21px;
+      left: 57px; }
+    body #description .quantityContainer div.down {
+      top: 53px;
+      left: 57px; }
   body #description .modal {
     display: none;
     position: fixed;
@@ -106,7 +129,7 @@ body {
     body #footer .date {
       color: red; }
 
-@media (min-width: 750px) {
+@media (min-width: 450px) {
   body {
     margin: 0 auto;
     height: 100vh;
@@ -133,6 +156,9 @@ body {
         #navigation nav.inactive ul li:last-child {
           text-align: center;
           border-left: 1px solid white; }
+        #navigation nav.inactive ul li a {
+          text-decoration: none;
+          color: #fff; }
 
   #breadcrumbs {
     grid-area: crumbs; }
@@ -160,10 +186,12 @@ body {
   #description {
     grid-area: description;
     padding-right: 30px; }
-    #description .modal .content p {
-      font-size: 24px;
-      font-weight: bold;
-      font-family: sans-serif; }
+    #description .modal .content {
+      border: double 20px lightgreen; }
+      #description .modal .content p {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: sans-serif; }
 
   #expanded {
     grid-area: expanded;

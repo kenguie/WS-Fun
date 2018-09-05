@@ -164,3 +164,19 @@ window.onclick = event => {
         modal.style.display = "none";
     }
 }
+
+// counter button
+const number = document.getElementsByClassName('number')[0];
+currentNum = 1;
+number.innerHTML = currentNum;
+document.getElementsByClassName('up')[0].addEventListener('click', (event) => {
+  number.innerHTML = currentNum++;
+  number.innerHTML = currentNum;
+});
+document.getElementsByClassName('down')[0].addEventListener('click', (event) => {
+  if (currentNum > 0) {
+    number.innerHTML = currentNum--;
+    number.innerHTML = currentNum;
+  }
+});
+
